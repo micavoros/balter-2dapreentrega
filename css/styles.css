@@ -76,13 +76,7 @@ body{
     }
     
     .text-quienes{
-        font-family: "Montserrat";
-        color: #584E45;
         font-size: 0.8em;
-        text-align: center;
-        font-weight: lighter;
-        align-items: center; 
-        list-style-type: none;
         margin-top: 20px;
     }
 
@@ -92,42 +86,55 @@ body{
     }
     
     /* NAV */
+    header {
+        padding: unset;
+    }
 
     .header-pages{
         display: none;
     }
-    
-     nav a{
-        text-decoration: none;
-        color: #8C6F5F;
-        font-size: 1.4em;
-        text-transform: uppercase;
-    }
-    
+
     .header-list {
-        justify-content: center;
-        display: flex;
-        width: 80%;
-        text-decoration: none;
-        color: #8C6F5F;
-        font-size: 1.4em;
-        text-transform: uppercase;
+        display: none;
     }
-    
-     nav {
-        display: flex;
-        flex-direction: row nowrap;
-        justify-content: flex-end;
-        align-items: center;
+
+    .header-title {
+        width: 50%;
+        margin-top: 10%;
+        margin-left: 15%;
+
     }
-    
+
+    .title-index {
+        width: 100%;
+        margin-bottom: 100%;
+        margin-left: 420%;
+    }
+
     .header-socialmedia {
         flex-direction: column;
-        width: 5%;
-        padding-left: 5px;
-        padding-right: 5px;
-    
+        width: 25%;
+        padding-left: unset;
+        padding-right: unset;
+        margin-right: 10%;
     }
+    /* NAV */
+
+    /* FOOTER */
+    .iconos-redes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+   
+    a {
+    display: unset;
+    }
+    
+    .footer-list {
+        font-size: 1em;
+    }
+    /* FOOTER */
 }
 /* mobile nosotros */
 
@@ -466,11 +473,11 @@ header{
 
 }
 
-
 .header-title {
     width: 15%;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     align-items: center;
     color:#584E45
 }
@@ -498,8 +505,8 @@ header{
  nav a{
     text-decoration: none;
     color: #8C6F5F;
-    font-size: 1.4em;
-    text-transform: uppercase;
+    /* font-size: 1.4em; */
+    /* text-transform: uppercase; */
 }
 
 .header-list {
@@ -570,7 +577,6 @@ footer{
     flex-direction: row;
     background-color:#584E45 ;
     bottom: 100vh;
-    height: 20vh;
 }
 
 .footer-contact {
