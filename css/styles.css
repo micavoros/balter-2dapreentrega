@@ -527,8 +527,8 @@ header{
  nav a{
     text-decoration: none;
     color: #8C6F5F;
-    /* font-size: 1.4em; */
-    /* text-transform: uppercase; */
+    /* font-size: 1.4em; 
+    text-transform: uppercase;  */
 }
 
 .header-list {
