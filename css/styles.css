@@ -1,17 +1,13 @@
 @font-face {
     font-family: "Roxborough-CF";
     src: url("../assets/fonts/Roxborough-CF/Roxborough\ CF.ttf");
+    font-family: "Montserrat";
+    src: url(../assets/fonts/Montserrat/Montserrat-Regular.ttf);
 }
 *{
   margin: 0 ;
   padding: 0;
-  width: 100%;
   border: 0;
-  font-size: 100%;
-}
-
-body{
-    overflow-x: hidden;
 }
 
 
@@ -60,99 +56,6 @@ body{
     overflow: hidden;
 }
 /* Nosotros */
-
-/* mobile nosotros y faq*/
-@media only screen and (min-width: 0px) and (max-width: 375px) {
-    .main-seccion-nosotros {
-        width: 100%;
-    }
-    .seccion-nosotros{
-        margin-top: 0px;
-        padding: 20px;
-    }
-    
-    .title-quienes{
-        font-size: 1.2em; 
-    }
-    
-    .text-quienes{
-        font-size: 0.8em;
-        margin-top: 20px;
-    }
-
-    .seccion-imagen-nosotros{
-        height: inherit;
-    }
-    
-    /* NAV */
-    header {
-        padding: unset;
-    }
-
-    .header-pages{
-        display: none;
-    }
-
-    .header-list {
-        display: none;
-    }
-
-    .header-title {
-        width: 50%;
-        margin-top: 10%;
-        margin-left: 15%;
-    }
-
-    .title-index {
-        width: 100%;
-        margin-bottom: 100%;
-        margin-left: 420%;
-    }
-
-    .header-socialmedia {
-        flex-direction: column;
-        width: 25%;
-        padding-left: unset;
-        padding-right: unset;
-        margin-right: 10%;
-    }
-    /* NAV */
-
-    /* FOOTER */
-    .iconos-redes{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-   
-    a {
-    display: unset;
-    }
-    
-    .footer-list {
-        font-size: 1em;
-    }
-    /* FOOTER */
-    
-    .main-seccion-faq {
-        width: 100%;
-    }
-
-    .title-faq{
-        font-size: 1.2em;
-    }
-    .articulo__titulo{
-        font-size: 1em;
-    }
-    .articulo__texto{
-        font-size: 0.5em;
-    }
-    .main-seccion-faq {
-        height: inherit;
-    }
-
-}
-/* mobile nosotros y faq */
 
 
 /* Productos con flex*/
@@ -477,85 +380,113 @@ input{
 
 
 /* Nav */
-header{
-    background-color: #D8C5B4 ;
-    width: 100%;
-    height: 100px; 
+header {
+    background-color: #D8C5B4;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 1em;
-}
-
- nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-
+    min-height: 130px;
 }
 
-.header-title {
-    width: 15%;
+.logo-balter {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    width: 20%;
     align-items: center;
-    color:#584E45
 }
 
-.title-balter{
-    width: 160px;
-    height: 90px;
-    margin-left: 40px;
+.img-balter {
+    height: 50px;
 }
 
-.title-index {
-    text-align: center;
-    font-family: "Roxborough-CF";
-    margin-right: 50px;
+h1 {
+    font-size: 1.3em;
+    font-family:"Roxborough-CF";
+    color: #584E45;
 }
-    
 
-.header-pages{
+.secciones-paginas {
+    width: 60%;
+}
+
+.paginas {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
     list-style-type: none;
-    font-family:"Roxborough-CF";  
-    text-align: center;
-
-}
-
- nav a{
-    text-decoration: none;
+    justify-content: space-evenly;
+    font-family: "Roxborough-CF";
     color: #8C6F5F;
-    /* font-size: 1.4em; 
-    text-transform: uppercase;  */
-}
-
-.header-list {
-    justify-content: center;
-    display: flex;
-    width: 80%;
-    text-decoration: none;
-    color: #8C6F5F;
-    font-size: 1.4em;
     text-transform: uppercase;
+    font-size: 1.6em;
 }
 
- nav {
+a{
+    font-family: "Roxborough-CF";
+    color: #8C6F5F;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.socialmedia{
     display: flex;
-    flex-direction: row nowrap;
-    justify-content: flex-end;
-    align-items: center;
+    flex-direction: row;
+    width: 10%;
+    justify-content: space-evenly;
 }
 
-.header-socialmedia {
-    display: flex;
-    width: 5%;
-    align-items: center;
-    padding-left: 5px;
-    padding-right: 5px;
-
+.checkbtn {
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
 }
+
+#check {
+    display: none;
+}
+
+
+@media (max-width:375px) {
+    .checkbtn{
+        display: block;
+        float: inline-start;
+    }
+
+    .menuburger {
+        float: inline-start;
+    }
+
+    .paginas{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #F2F2F2;
+        top: 130px;
+        left: -120%;
+        text-align: center;
+        transition: all .5s;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+    
+    .socialmedia{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    header { display: flex; text-align:center; }
+    header > .logo-balter { flex:1;        order: 2; }
+    header > .secciones-paginas    { width: 110px;  order: 1; }
+    header > .socialmedia   { width: 110px;  order: 3; }
+}
+
 
 /* Nav */
 
