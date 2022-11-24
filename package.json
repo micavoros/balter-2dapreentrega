@@ -1,0 +1,25 @@
+{
+  "name": "balter",
+  "version": "1.0.0",
+  "description": "trabajo coderhouse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/style.scss css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micavoros/balter-2dapreentrega.git"
+  },
+  "author": "micaela voros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/micavoros/balter-2dapreentrega/issues"
+  },
+  "homepage": "https://github.com/micavoros/balter-2dapreentrega#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20"
+  }
+}
