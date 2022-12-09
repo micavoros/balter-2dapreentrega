@@ -250,7 +250,14 @@ h3 {
     background-image: url(../assets/img/cuidados-mobile.png) !important;
   }
   .main-cuidados {
-    font-size: 0.8em;
+    font-size: 0.7em;
+  }
+  .list-cuidados-ultimo {
+    margin-top: 25%;
+  }
+  .title-cuidados {
+    margin-top: 15%;
+    margin-bottom: 10%;
   }
   /* Cuidados */
   /* Contacto */
@@ -437,6 +444,7 @@ h3 {
   margin-left: 3%;
   margin-right: 3%;
   font-size: 1em;
+  gap: 1%;
 }
 
 .title-cuidados {
