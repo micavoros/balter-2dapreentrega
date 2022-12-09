@@ -86,7 +86,6 @@ footer {
   background-color: #584E45;
   min-height: 200px;
   font-family: "Montserrat";
-  font-size: 1em;
   color: #F2F2F2;
 }
 
@@ -97,10 +96,15 @@ footer {
   justify-content: space-around;
 }
 
-h3 {
+
+.footer-contact .footer-redes {
+  font-size: 1em;
   font-family: "Montserrat";
-  font-size: 1.6em;
   color: #F2F2F2;
+}
+
+h3 {
+  font-size: 1.4em;
 }
 
 .footer-list {
@@ -138,7 +142,7 @@ h3 {
     float: inline-start;
   }
   .paginas {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100vh;
     background-color: #F2F2F2;
@@ -188,9 +192,20 @@ h3 {
   }
   /* Footer */
   /* Home */
-  .main a {
-    font-size: 0.2em;
+  .main { 
+    /* height: 100vh; */
+    background: url("../assets/img/inicio-mobile.png") no-repeat center !important;
+    background-size: cover;
+    font-size: 0.8em;
   }
+  .btn-productos{
+    padding: 2% 2% !important;
+  }
+  .main-content{ 
+    padding-top: 90% !important; 
+    padding-left: 10% !important;
+    display: block !important;
+  } 
   /* Home */
   /* Nosotros */
   .main-seccion-nosotros {
@@ -202,14 +217,37 @@ h3 {
   }
   .seccion-imagen-nosotros {
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: 40% 25%;
+    background-image: url(../assets/img/nosotros-mobile.png) !important;
+    background-size: cover;
+  }
+
+  .footer-redes h3 {
+    margin-top: 9%;
   }
   /* Nosotros */
+
+  /* Productos */
+.producto img {
+  width: 35%;
+}
+.producto h2 {
+  font-size: 1.1em;
+}
+.fotos-productos {
+  flex-direction: column;
+  gap: 20px;
+}
+.title-productos h1{
+  font-size: 1em;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+  /* Productos */
+
   /* Cuidados */
   .imagen-cuidados {
-    background-repeat: no-repeat;
-    background-position: top center;
+    background-image: url(../assets/img/cuidados-mobile.png) !important;
   }
   .main-cuidados {
     font-size: 0.8em;
@@ -232,15 +270,17 @@ h3 {
   .googlemaps {
     width: 100%;
   }
+  .boton-contacto {
+    width: 60% !important;
+    margin-left: 40% !important;
+  }
   /* Contacto */
   /* FAQ */
   .main-seccion-faq {
     font-size: 0.8em;
-    width: 100%;
   }
-  .articulo {
-    padding: 2%;
-    padding-bottom: 10%;
+  .seccion-image-faq {
+    background-image: url(../assets/img/IMG_4705.jpg) !important;
   }
 }
 /*Home */
@@ -252,22 +292,25 @@ h3 {
 
 .main a {
   text-transform: none;
-  font-size: 1.6em;
+  font-size: 1.5em;
 }
 
 .btn-productos {
   font-family: "Roxborough-CF";
   background: #8C6F5F;
   color: #F2F2F2;
-  padding: 15px 30px;
-  position: relative;
-  top: 500px;
-  left: 400px;
+  padding: 0.5% 1%;
 }
 
 .btn:hover {
   background: none;
 } /* efecto vacio boton */
+
+.main-content {
+  padding-top: 30%; 
+  padding-left: 25%; 
+  display: block;
+}
 /* Home */
 /* Nosotros */
 .main-seccion-nosotros {
@@ -311,91 +354,38 @@ h3 {
   background-image: url(../assets/img/IMG_4721.jpg);
   background-size: cover;
   background-position: center;
-  position: relative;
   overflow: hidden;
 }
-
 /* Nosotros */
-/* Productos con flex*/
-/* .main-productos{
-  display: flex;
-  flex-direction: row;
-}
 
-
-.lateral-izq-productos{
-  width: 15%;
-}
-
-.lateral-der-productos{
-  width: 15%;
-}
-
-.seccion-productos{
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.title-productos{
-  text-align: center;
-  font-family: "Roxborough-CF";
-  color: #584E45;
-  font-size: 1.5em; 
-  text-transform: uppercase;
-  margin-top: 70px;
-}
-
-.fotos-productos{
-  display: flex;
-  flex-direction: row;
-  width: 25%;
-  justify-content: space-around;
-  margin-top: 60px;
-}
-
-.difusor{
-  margin-left: 60px;
-  margin-right: 60px;
-}
-
-
-.subtitulos-productos{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  width: 90%;
-  margin: auto;
-  padding-bottom: 10%;
-  text-align: center;
-  font-family: "Montserrat";
-  color: #584E45;
-  font-size: 1.3em;
-  align-items: center; 
-} */
-/* Productos con flex */
-/* Productos con grids */
+/* Productos*/
 .main-productos {
-  height: 50%;
+  height: 80vh;
   display: grid;
-  grid-template-areas: "laterali productos laterald" "laterali productos laterald" "laterali productos laterald" "laterali productos laterald";
+  grid-template-areas: 
+  "laterali productos laterald" 
+  "laterali productos laterald" 
+  "laterali productos laterald" 
+  "laterali productos laterald";
   grid-template-rows: 100%;
-  grid-template-columns: 12% 76% 12%;
+  grid-template-columns: 10% 80% 10%;
 }
 
-.lateral-izq-productos {
-  grid-area: laterali;
-}
-
-.lateral-der-productos {
+.fondo-productos-der{
+  background-image: url(../assets/img/IMG_4702\ -\ copia.jpg);
+  background-size: cover;
   grid-area: laterald;
+}
+
+.fondo-productos-izq{
+  background-image: url(../assets/img/IMG_4702\ -\ copia.jpg);
+  background-size: cover;
+  grid-area: laterali;
 }
 
 .seccion-productos {
   font-size: 1em;
+  color: #584E45;
   grid-area: productos;
   background-color: #F2F2F2;
   display: flex;
@@ -406,22 +396,23 @@ h3 {
 
 .fotos-productos {
   display: flex;
-  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
 }
 
 .title-productos {
   font-family: "Roxborough-CF";
-  color: #584E45;
-  font-size: 1.5em;
+  font-size: 1.4em;
   text-transform: uppercase;
+  margin-bottom: 8%;
 }
 
-.subtitulos-productos {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 210px;
+.producto {
+  font-size: 0.9em;
+  font-family: "Montserrat";
 }
+/* Productos*/
+
 
 /* Cuidados */
 .main-cuidados {
@@ -435,8 +426,7 @@ h3 {
   background-image: url(../assets/img/IMG_4714.jpg);
   background-size: cover;
   background-position: center;
-  position: relative;
-  overflow: hidden;
+   overflow: hidden;
 }
 
 .seccion-cuidados {
@@ -444,8 +434,8 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 3%;
+  margin-right: 3%;
   font-size: 1em;
 }
 
@@ -486,14 +476,14 @@ h3 {
   padding: 2%;
 }
 
-.section-faq {
+.seccion-faq {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: #584E45;
-  width: 40%;
+  color: #584E45; 
   font-size: 1em;
+  width: 100%;
 }
 
 .articulo {
@@ -522,12 +512,10 @@ h3 {
 }
 
 .seccion-image-faq {
-  width: 100%;
-  height: 100vh;
-  background-image: url(../assets/img/Mi\ proyecto.jpg);
-  background-size: cover;
-  position: relative;
-  overflow: hidden;
+  width: 50%;
+  height: 90vh;
+  background-image: url(../assets/img/IMG_4705.jpg);
+  background-size: cover; 
 }
 
 /* Seccion FAQ */
@@ -610,8 +598,8 @@ textarea {
 
 input {
   background-color: #584E45;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 .ubicacion-contacto {
